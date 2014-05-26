@@ -1,0 +1,260 @@
+<!DOCTYPE html>	
+{% load staticfiles %}
+<meta name="Index Page" author="darkdefender27" />
+<html>
+	<head>
+		<title>
+		  	Index Page
+		</title>
+		
+		<link rel="stylesheet" href="{% static 'css/custom.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/footer.css' %}" />
+		
+		<script src="{% static 'js/jquery.min.js' %}"></script>
+		<script src="{% static 'js/bootstrap.min.js' %}"></script>
+		
+	</head>
+	
+	<body>
+	
+	<nav class="navbar navbar-inverse" role="navigation">
+	  <div class="container-fluid">
+
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		    <span class="sr-only">Toggle navigation</span>
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>
+		  </button>
+		  <img class="navbar-brand" src = "{% static 'images/iitb_logo_white.png' %}" />
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		
+		  <ul class="nav navbar-nav">
+		    <li class="dropdown">
+		      <a href="#" class="dropdown-toggle" data-toggle="dropdown">darkdefender27 <b class="caret"></b></a>
+		      <ul class="dropdown-menu">
+		        <li><a href="#">Edit Profile</a></li>
+		        <li><a href="#">Preferences</a></li>
+		        <li><a href="#">Settings</a></li>
+		        <li class="divider"></li>
+		        <li><a href="#">Log Out</a></li>
+		      </ul>
+		    </li>
+		  </ul>  
+		  
+		  <ul class="nav navbar-nav navbar-right">
+			<li>
+			  <form class="navbar-form navbar-left" role="search">
+				<div class="form-group">
+				  <input type="text" class="form-control" placeholder="Search">
+				</div>
+				<button type="submit" class="btn btn-primary btn">Submit</button>
+			  </form>
+		   </li>
+<!-- 		    
+		    <li class="dropdown">
+		      <a href="#" class="dropdown-toggle" data-toggle="dropdown">darkdefender27 <b class="caret"></b></a>
+		      <ul class="dropdown-menu">
+		        <li><a href="#">Settings</a></li>
+		        <li><a href="#">Preferences</a></li>
+		        <li class="divider"></li>
+		        <li><a href="#">LogOut</a></li>
+		      </ul>
+		    </li>
+		  </ul>
+-->	  
+
+			<li>
+				<a data-toggle="modal" data-target="#myModal" href="#">Login</a>
+			</li>
+			<li>
+				<a data-toggle="modal" data-target="#ModalforSignUp" href="#">Register</a>
+			</li>
+
+		</div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+
+	<!-- NAVBAR HEADER CODE COMPLETE -->
+	
+	
+		<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+		  	<div class="modal-content">
+		      	<div class="modal-header">
+		        	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		        	<h3 class="modal-title" id="myModalLabel">Login</h3>
+		      	</div>
+		      	
+		   	<div class="modal-body">
+			   	<div class="row">
+				 	<div class="col-md-8 col-md-offset-2">		   			
+						<br />
+						<br />
+						<form role="form" method="post" action="#">
+						
+							<div class="form-group">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+									<input type="email" class="form-control" name ="email" placeholder="Your Email" required="required">
+							  	</div>
+							</div>
+						
+							<br/>
+						
+							<div class="form-group">
+								<div class="input-group">
+									 <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+									 <input type="password" class="form-control" name="pwd" placeholder="Password" required="required">
+							  	</div>
+							</div>
+						
+							<br/>
+						
+							<button type="submit" class="btn btn-primary btn">Submit</button>
+						
+						</form>
+			   		</div>
+		   		</div>
+		   	</div>
+		   	
+		      	<div class="modal-footer">
+		        	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        </div>
+		  	</div>
+		</div>
+	</div>
+
+	<!-- REGISTER MODAL-->
+
+	<div class="modal fade" id="ModalforSignUp" tabindex="-1" role="dialog" aria-labelledby="ModalLabelSignUp" aria-hidden="true">
+		<div class="modal-dialog">
+		  	<div class="modal-content">
+		      	<div class="modal-header">
+		        	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		        	<!--<h4 class="modal-title" id="ModalLabelSignUp">Sign Up</h4>-->
+		        	<label for="signup">
+						<font size = "5">Sign Up</font>
+					</label>
+		      	</div>
+		   	<div class="modal-body">
+		   	<div class="row">
+			  <div class="col-md-8 col-md-offset-2">
+			  <br />
+			  <br />
+				<form role="form" action="#" method="post">
+					<div class="form-group">
+				   		<div class="input-group">
+						  <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+						  <input type="text" class="form-control" name="fname" placeholder="Your Full Name" required="required">
+					    </div>
+		   			</div>
+						<div class="input-group">
+							<span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+							<input type="email" class="form-control" name ="email" placeholder="Your Email" required="required">
+					  	</div>
+					 	<br/>
+		   			<div class="input-group">
+						 <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+						 <input type="password" class="form-control" name="pwd" placeholder="Password" required="required">
+				  	</div>
+				  	<br/>
+		   			<div class="input-group">
+						 <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+						 <input type="password" class="form-control" name ="rpwd" placeholder="Re-enter Password" required="required">
+				    </div>
+				    <br/>
+					<button type="submit" class="btn btn-primary btn">Submit</button>
+					</form>
+					</div>
+				</div>
+		   
+		   	</div>
+		      	<div class="modal-footer">
+		        	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        </div>
+		  	</div>
+		  	
+		</div>
+	</div>
+
+	<!-- MODAL CODE COMPLETES HERE -->
+
+	<!-- CAROUSEL CODE GOES HERE -->
+	
+	
+	<div class="container">
+		<div class="row col-md-2"></div>
+		<div class="row col-md-8">
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			  		<!-- Indicators -->
+				  	<ol class="carousel-indicators">
+				    	<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				    	<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				    	<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				  	</ol>
+			
+				  	<!-- Wrapper for slides -->
+				  	<div class="carousel-inner" align="center">
+				    	<div class="item active">
+				      	<img src="{% static 'images/ubuntu.png' %}" alt="Hello">
+				      	<div class="carousel-caption">
+				        	Okay...
+				     	</div>
+				  	</div>
+				  	
+				  	<div class="item" align="center">
+				      	<img src="{% static 'images/apl.png' %}" alt="Hello">
+				      	<div class="carousel-caption">
+				        	Only Time Will Tell...
+				      	</div>
+				  	</div>
+				  	<div class="item " align="center">
+				     	<img src="{% static 'images/img5.jpg' %}" alt="Hello">
+				      	<div class="carousel-caption">
+				        	Hiucgijn IUjscao OInca...
+				      	</div>
+		    		</div>
+	  		</div>
+	  	</div>
+	
+	  <!-- Controls -->
+	  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+	    <span class="glyphicon glyphicon-chevron-left"></span>
+	  </a>
+	  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+	    <span class="glyphicon glyphicon-chevron-right"></span>
+	  </a>
+	</div>
+		<div class="row col-md-2">
+		</div>
+	
+	<!-- FOOTER CODE GOES HERE -->
+	
+	<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">	
+		<div id="footer">
+		  <div class="container">
+			<center>
+				<p class="muted credit">Development on <a href="http://www.aakashlabs.org.in"> Aakash Labs</a> under construction.
+				 &nbsp; |  &nbsp;
+			   	Copyright <a href="http://www.github.com/darkdefender27"> © darkdefender27</a>  Inc. and its affiliates.
+				 &nbsp; |  &nbsp;
+			   	Contact : <a href="https://www.facebook.com/sHuBhAm5/"> ushubham27 </a>			   	
+				</p>
+			</center>
+		  </div>
+		</div>
+	</nav>
+	
+	<!-- END OF FOOTER -->
+	
+	</body>
+</html>
