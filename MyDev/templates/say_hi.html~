@@ -1,6 +1,5 @@
 {% load staticfiles %}
 <html>
-{% load staticfiles %}
 <head>
    <title>
       Say_Hi
@@ -12,6 +11,8 @@
    <h1>
       Hi Django! Wassup...
    </h1>
+   
+   <form >
 </body>
 </html>
 

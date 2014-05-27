@@ -8,7 +8,16 @@ class Blog (models.Model):
 
 	def __unicode__(self):
 		return self.title
+
 		
+class Book(models.Model):
+    title = models.CharField(max_length=100)
+    publication_date = models.DateField()
+
+    def __unicode__(self):
+        return self.title
+
+
 class Customer (models.Model):
 	tab_id = models.IntegerField()
 	email_id = models.EmailField(max_length = 75)
