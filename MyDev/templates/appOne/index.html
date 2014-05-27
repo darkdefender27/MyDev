@@ -51,10 +51,10 @@
 		  
 		  <ul class="nav navbar-nav navbar-right">
 			<li>
-			  <form class="navbar-form navbar-left" role="search">
+			  <form class="navbar-form navbar-left" role="search" action="/search/" method="GET">
 			  	{% csrf_token %}
 				<div class="form-group">
-				  <input type="text" class="form-control" placeholder="Search">
+				  <input type="text" name="q" class="form-control" placeholder="Search">
 				</div>
 				<button type="submit" class="btn btn-primary btn">Submit</button>
 			  </form>
@@ -198,8 +198,39 @@
 	</div>
 
 	<!-- MODAL CODE COMPLETES HERE -->
+	{% if query %}
+	<div class="row col-md-2"></div>
+	<div class="row col-md-8">
+		<div class="jumbotron">
+		<strong>
+			<h1>
+				Jumbotron
+			</h1>
+			<br />
+			<br />
 
-	
+		</strong>
+			<p>You searched for :  <strong>{{ query }}</strong></p>
+
+			{% if books %}
+				<p>Found {{ books|length }} book{{ books|pluralize }}.</p>
+				<ul>
+					{% for book in books %}
+					<li>{{ book.title }}</li>
+					{% endfor %}
+				</ul>
+			{% else %}
+				<p>No books matched your search criteria.</p>
+			{% endif %}
+			
+			<br />
+			<p>
+				<a class="btn btn-primary" href="#" role="button">Learn more</a>
+			</p>
+		</div>
+	</div>
+	<div class="row col-md-2"></div>
+	{% endif %}
 	<!-- FOOTER CODE GOES HERE -->
 	
 	<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">	
