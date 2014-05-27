@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>
+		Blog Page
+	</title>
+</head>
+
+<body>
+	<h1>
+		Current Blogs...
+	</h1>
+	{% if blogs %}
+	<ul>
+		{% for b in blogs %}
+		<li>{{ b.title }}</li>
+		&nbsp;<p>{{ b.body }}</p>
+		{% endfor %}
+	</ul>
+	{% else %}
+		<strong>
+				No current Blogs present.
+		</strong>
+	{% endif %}
+</body>
+
+</html>

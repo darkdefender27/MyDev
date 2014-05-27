@@ -1,0 +1,23 @@
+REISTRATION :
+
+1. Tablet Id
+2. Password
+3. Re-Enter Password
+3. Location
+
+LOGN :
+
+A) UserLogin~
+1. Tablet Id
+2. Password
+
+B)AdminLogin~
+1. Admin_Key
+2. Password
+
+TABLES/CLASSES :
+1. CUSTOMER
+-- TAB_ID
+-- PASSWORD
+-- EMAIL_ID
+-- LOCATION
