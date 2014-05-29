@@ -14,7 +14,8 @@ urlpatterns = patterns('',
      url(r'^hi/$', 'appOne.views.say_hi', name='hi'),
      url(r'^hello/$', 'appOne.views.hello', name='hello'),
      url(r'^index/$', 'appOne.views.index', name='index'),
-     url(r'^blog/', 'appOne.views.blog', name='blog'),
+     url(r'^blog/$', 'appOne.views.blog', name='blog'),
      url(r'^register/$', 'appOne.views.register', name='register'),
+     url(r'^blog/submit/$', 'appOne.views.submit_post', name='submitpost'),     
      	 
 )

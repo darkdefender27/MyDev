@@ -87,52 +87,6 @@
 	
 	
 		<!-- Modal -->
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-		  	<div class="modal-content">
-		      	<div class="modal-header">
-		        	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-		        	<h3 class="modal-title" id="myModalLabel">Login</h3>
-		      	</div>
-		      	
-		   	<div class="modal-body">
-			   	<div class="row">
-				 	<div class="col-md-8 col-md-offset-2">		   			
-						<br />
-						<br />
-						<form role="form" method="post" action="#">
-							{% csrf_token %}		
-							<div class="form-group">
-								<div class="input-group">
-									<span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
-									<input type="number" class="form-control" name ="tabid" placeholder="Your Registered Tablet-Id" required="required">
-							  	</div>
-							</div>
-						
-							<br/>
-						
-							<div class="form-group">
-								<div class="input-group">
-									 <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-									 <input type="password" class="form-control" name="pwd" placeholder="Password" required="required">
-							  	</div>
-							</div>
-						
-							<br/>
-						
-							<button type="submit" class="btn btn-primary btn">Submit</button>
-						
-						</form>
-			   		</div>
-		   		</div>
-		   	</div>
-		   	
-		      	<div class="modal-footer">
-		        	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		        </div>
-		  	</div>
-		</div>
-	</div>
 
 	<!-- REGISTER MODAL-->
 	
@@ -151,8 +105,9 @@
 			  <div class="col-md-8 col-md-offset-2">
 			  <br />
 			  <br />
+			  
 				<form role="form" action="/register/" method="POST">
-				{% csrf_token %}
+				{% csrf_token %}	
 				
 					<div class="form-group">
 				   		<div class="input-group">
@@ -184,7 +139,7 @@
 				    <br/>
 				    <br/>
 					<button type="submit" class="btn btn-primary btn">Submit</button>
-					</form>
+				</form>
 					</div>
 				</div>
 		   
@@ -225,7 +180,7 @@
 			
 			<br />
 			<p>
-				<a class="btn btn-primary" href="#" role="button">Learn more</a>
+				<a class="btn btn-primary" href="http://www.getbootstrap.com/components/#jumbotron" target="_blank" role="button">Learn more</a>
 			</p>
 		</div>
 	</div>

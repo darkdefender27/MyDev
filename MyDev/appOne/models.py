@@ -27,3 +27,5 @@ class Customer (models.Model):
 	
 	def __unicode__(self):
 		return self.tab_id
+	
+	

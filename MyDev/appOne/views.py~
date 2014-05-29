@@ -2,6 +2,7 @@ from django.shortcuts import render_to_response, get_object_or_404, render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import RequestContext
 from appOne.models import Blog, Customer, Book
+from appOne.forms import PostForm
 
 def hello(request):
    return HttpResponse("Hello..")
@@ -29,7 +30,7 @@ def search(request):
 
 def register(request):
 	context = RequestContext(request)
-	
+
 	if request.method == 'POST':
 		form = Customer(request.POST)
 		if form.is_valid():
@@ -49,4 +50,33 @@ def blog(request):
 		'blogs' : blogs,
 	}
 	return render_to_response("appOne/blog.html", context_dict, context)
+
+def submit_post(request):
 	
+	"""
+		If user clicked 'submit' button(POST)
+		Validate form
+		Save Form
+		Show all posts
+		Throw errors (if any)
+	"""
+	context = RequestContext(request)
+	
+	if request.POST:
+		postform = PostForm(data=request.POST)
+		if postform.is_valid():
+			postform.save(commit=True)
+			return HttpResponseRedirect('/appOne/blog/')
+		else:
+			print postform.errors 
+	else:
+		postform = PostForm()
+		print postform # Not Neccessary
+		
+	context_dict = {
+		'postform' : postform,
+	}
+		
+	return render_to_response("appOne/submitpost.html", context_dict, context)
+
+
